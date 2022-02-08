@@ -5,14 +5,15 @@ body{
     display: flex;
     font-size: 2rem;
     justify-content: center;
+    height: 100vh;
 }
 .mainParent{
     background:rgba(255,255,255,0.40);
-
     border-radius: 10px;
     box-shadow: -5px 5px 20px #8C4F2F;
     padding: 2rem;
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 .result {
     background: #fff;

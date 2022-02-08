@@ -5,6 +5,7 @@
 //1. press button, display number to the screen in order from right to left
 const buttons = document.querySelectorAll('button');
 const displayElement = document.querySelector('#result');
+const hahaElement = document.querySelector('#haha');
 let textToDisplay = '';
 const symbols = ['/','*','+','-']
 buttons.forEach(btn=>{
@@ -12,6 +13,7 @@ buttons.forEach(btn=>{
         const val = btn.innerText;
         displayElement.style.background = '';
         displayElement.style.color = '';
+        hahaElement.classList.add('haha');
 
         //when = clicked
         if(val==="="){
@@ -65,9 +67,14 @@ const onTotal = () => {
         displayElement.style.background = 'red';
         displayElement.style.color = 'white';
         displayElement.classList.add('prank');
+        hahaElement.classList.add('prank');
 
         displayElement.addEventListener('animationend',()=>{
             displayElement.classList.remove('prank');
+        
+        });
+        hahaElement.addEventListener('animationend',()=>{
+            hahaElement.classList.remove('prank')
         })
 
     }
@@ -87,5 +94,6 @@ textToDisplay=""
 //randomnumber
 const randomnumber =() =>{
     const val = Math.floor(Math.random()*8);
-    return val < 4 ? val :0; 
+    return 8;
+    //return val < 4 ? val :0; 
 }
