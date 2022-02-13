@@ -80,6 +80,7 @@ body{
 }
 @keyframes shake {
     0%{
+        display: block;
         transform: translateX(10px);
     }
     25%{
